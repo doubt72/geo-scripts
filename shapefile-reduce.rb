@@ -100,8 +100,7 @@ hx_min = 999999999999
 hy_max = -999999999999
 hy_min = 999999999999
 
-# Actual re-projection is done here:
-
+# Figure out the bounds:
 states.each_key do |state|
   states[state].each do |record|
     record[1].geometry.each do |polygon|
@@ -159,7 +158,6 @@ states.each_key do |state|
 end
 
 # Here I figure out the ranges for my, er, display later:
-
 x_range = (x_max - x_min) / 120.0
 y_range = (y_max - y_min) / 120.0
 
@@ -186,7 +184,7 @@ end
 
 total = 0
 
-# And here I move everything around:
+# And here I do the actual projection:
 states.each_key do |state|
   revised = []
   state_total = 0
