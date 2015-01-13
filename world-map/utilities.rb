@@ -281,7 +281,7 @@ class Polygon
 end
 
 # The following two classes implement a generic min-heap in an array;
-# these classes need to be inhereted and have key methods overloaded
+# these classes need to be inherited and have key methods overloaded
 # for an actual implementation, and are the used to efficiently
 # implement our point reduction and triangulation algorithms
 #
