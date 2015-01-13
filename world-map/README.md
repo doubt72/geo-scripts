@@ -8,6 +8,15 @@ editor.  The data I'm using for this originally comes from here:
 
 [Natural Earth 1:10m physical vector data](http://www.naturalearthdata.com/downloads/10m-physical-vectors/ "link")
 
+Requires GEOS/RGeo for parsing shapefiles (but not Proj, this time
+everything is left in lat/lon).  Brew installation should be fine on
+OSX, and then you can just install the rgeo gem.  Shouldn't be
+terribly difficult on other platforms, either (well, easier on Linux
+than Windows, probably.  Everything open source tends to be harder
+on Windows).  See here:
+
+[RGeo stuff](http://trac.osgeo.org/geos/ "link")
+
 I've included the actual data that I used for the script in the
 repository; however, for whatever reason, GEOS/RGeo had issues with
 three of the shapefiles, so I've included the "fixed" files (which I
